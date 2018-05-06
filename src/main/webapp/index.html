@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+        window.onload=function(){
+        var obt=document.getElementById("btnDelete");
+        var otb=document.getElementById("tb");
+        var tbody=otb.getElementsByTagName("tbody")[0];
+        obt.onclick=function(){
+            var cks=document.getElementsByName("del");
+            for(var index=0;index<cks.length;index++){
+                if(cks[index].checked==true){
+                    tbody.removeChild(cks[index].parentNode.parentNode);
+                }
+            }
+        }
+    }
+</script>
+</head>
+<body>
+<table id="tb" border="1" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>密码</th>
+        <th>地址</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" <!--选中行--> name="selectButton" /></td>
+        <td>张三</td>
+        <td>男</td>
+        <td>zhangsan</td>
+        <td>上海</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="selectButton"/></td>
+        <td>李四</td>
+        <td>男</td>
+        <td>lisi</td>
+        <td>安庆</td>
+    </tr>
+    <tr>
+        <td colspan="5" align="center">
+            <input type="button" id="btnDelete" value="删除" />
+        </td>
+    </tr>
+</table>
+</body>
+</html>
