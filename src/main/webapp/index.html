@@ -19,6 +19,21 @@
         }
     }
 </script>
+
+<style type="text/css">
+    <!--CSS定义一条水平虚线hr的方法： -->
+    hr {border:1px #cc3d2f dotted;}
+    /*CSS定义一条水平虚线div的方法：*/
+    /*#aaa {border-top:1px dashed #cc3d2c;height: 1px;overflow:hidden;}*/
+
+
+
+    #aaa{
+        height:1px;
+        border-bottom:1px solid #1a25cc;
+        overflow:hidden;
+    }
+</style>
 </head>
 <body>
 <table id="tb" border="1" cellpadding="0" cellspacing="0" width="100%">
@@ -51,6 +66,23 @@
             <input type="button" id="btnDelete" value="删除" />
         </td>
     </tr>
+
 </table>
+<br/>
+<br/>
+<br/>
+
+hr自定义水平虚线
+<hr size="1" noshade="noshade" style="border:1px #0fcc13 dotted;">
+<br/>
+div自定义水平虚线
+<div style="border-top:1px dashed #cc2e29;height: 1px;overflow:hidden"></div>
+
+<br/>
+css 定义div水平虚线
+<div id="aaa">linux</div>
+<br/>
+css 定义hr水平实线
+<hr size="1" noshade="noshade" />
 </body>
 </html>

@@ -1,0 +1,56 @@
+CSS如何定义一条水平虚线与实线
+假如定义一条水平的虚线呢？
+　　我们首先需要了解，关于线条的CSS的两个样式：
+　　dotted : 　在MAC平台上IE4 与WINDOWS和UNIX平台上IE5.5 为点线。否则为实线
+　　dashed : 　在MAC平台上IE4 与WINDOWS和UNIX平台上IE5.5 为虚线。否则为实线
+　　水平线条，我们可以用hr来实现，也可以定义一个div，将它的高度设为1px或其它你想要的高度。
+　　CSS定义一条水平虚线hr的方法：
+
+Html代码  收藏代码
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+    <html xmlns="http://www.w3.org/1999/xhtml">  
+    <head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <title>www.mb5u.com</title>  
+    <style type="text/css">  
+    hr {border:1px #cccccc dotted;}  
+    </style>  
+    </head>  
+    <body>  
+    <hr size="1" noshade="noshade" />  
+    </body>  
+    </html>  
+CSS定义一条水平虚线div的方法：　
+
+
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+    <html xmlns="http://www.w3.org/1999/xhtml">  
+    <head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <title>www.mb5u.com</title>  
+    <style type="text/css">  
+    #aaa {border-top:1px dashed #cccccc;height: 1px;overflow:hidden;}  
+    </style>  
+    </head>  
+    <body>  
+    <div id="aaa">模板无忧 - www.mb5u.com</div>  
+    </body>  
+    </html>  
+ 需要你注重hr方法中CSS的定义：
+    
+        hr {border:1px #cccccc dotted;} 用了dotted属性。
+        在div的方法中用了dashed属性。从表面上讲，两者没有明显的区别。
+        但在不同的浏览器环境下，可能会存在一些差异。但这些都无关紧要了，
+        因为大多数人看到的是一样的效果。虚线。：）
+
+ 
+
+实线实现：
+        
+    .div{  
+     height:1px;  
+     border-bottom:1px solid #ccc;  
+     overflow:hidden;  
+    }  
