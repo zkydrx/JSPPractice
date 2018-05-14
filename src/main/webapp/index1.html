@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkbox检查器</title>
+<script type="text/javascript">
+    function check_box() {
+        var obj = document.getElementsByName('checkThis');
+        var count=obj.length;
+        var j=0;
+        for(var i=0;i<count;i++)
+        {
+            if (obj[i].checked){
+                j++;
+            }
+        }
+        if(j==0)
+        {
+            alert("至少选择一个！！");
+            return false;
+        }else{
+            alert('right');
+            return true;
+        }
+    }
+</script>
+</head>
+<body>
+<form name="myform" action="">
+    <input type="checkbox" name="checkThis" value="1">1<br>
+    <input type="checkbox" name="checkThis" value="2">2<br>
+    <input type="checkbox" name="checkThis" value="3">3<br>
+    <input type="button" value="提交" onClick="return check_box()" >
+</form>
+</body>
+</html>
