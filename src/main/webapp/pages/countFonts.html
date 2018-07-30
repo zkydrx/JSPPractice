@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        function chkmaxsms(vobj1,vmax) {
+            var str = vobj1.value;
+            var strlen = str.length;
+            if (strlen > vmax) {
+                alert('字数超过限制');
+                eval_r(vobj1.value = str.substr(0, vmax));
+            }
+        }
+    </script>
+</head>
+<body>
+<input name="name" onkeyup="javascript:chkmaxsms(this,'12')">
+</body>
+</html>
