@@ -17,3 +17,22 @@ Date.prototype.format = function(format){
                 ("00"+ o[k]).substr((""+ o[k]).length));
     return format;
 };
+
+/**
+ * check font util.
+ * @param vobj1
+ * @param vmax
+ */
+function checkCountFonts(vobj1, vmax)
+{
+    var str = vobj1.value;
+    var strlen = str.length;
+    if (strlen > vmax)
+    {
+        alert('字数超过限制，请输入不超过' + vmax + '个字');
+        eval_r(vobj1.value = str.substr(0, vmax));
+    }
+}
+
+
+

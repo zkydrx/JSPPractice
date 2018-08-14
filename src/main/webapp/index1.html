@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>checkbox检查器</title>
-<script type="text/javascript">
+    <script type="text/javascript" src="js/utils.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
     function check_box() {
         var obj = document.getElementsByName('checkThis');
         var count=obj.length;
@@ -31,6 +33,8 @@
     <input type="checkbox" name="checkThis" value="2">2<br>
     <input type="checkbox" name="checkThis" value="3">3<br>
     <input type="button" value="提交" onClick="return check_box()" >
+
+    <input type="text" name="fonts" onkeyup="javascript:checkCountFonts(this,'10')">
 </form>
 </body>
 </html>
