@@ -34,5 +34,13 @@ function checkCountFonts(vobj1, vmax)
     }
 }
 
+//获取时间戳
+//第一种方法：
+var timestamp1 = Date.parse(new Date());
+//第二种方法：
+var timestamp2 = (new Date()).valueOf();
+//第三种方法：
+var timestamp3=new Date().getTime();
+
 
 
